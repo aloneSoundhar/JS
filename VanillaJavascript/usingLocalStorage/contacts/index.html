@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        .edit {
+            cursor: pointer;
+        }
+    </style>
+    <title>Contacts</title>
+</head>
+<body>
+    <nav>
+        <div class="nav-wrapper blue">
+            <div class="container-fluid">
+                <img src="./img/contact.png" height="70px" width="70px">
+                <a href="#" class="brand-logo center">Contacts</a>
+                <ul class="right">
+                    <li><a href="#" class="clear-btn btn red darken-2"><i class="material-icons left">delete</i>Clear all</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <br>
+    
+    <div class="container">
+        <!-- Form Card -->
+        <div class="card">
+            <div class="card-content">
+                <div class="card-title">Add Contact</div>
+                <form class="col">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <!-- <label for="name">Name</label> -->
+                            <input type="text" id="name" placeholder="Name">
+                        </div>
+                        <div class="input-field col s12">
+                            <!-- <label for="phone">Phone</label> -->
+                            <input type="text" id="phone" placeholder="Phone">
+                        </div>
+                    </div>
+                     <button class="add-btn btn blue darken-2">
+                        <i class="small material-icons left">add</i>
+                        Add
+                    </button> 
+                     <button class="update-btn btn orange darken-2">
+                        <i class="small material-icons left">edit</i>
+                        Edit
+                    </button>
+                    <button class="delete-btn btn red darken-2">
+                        <i class="small material-icons left">close</i>
+                        Delete
+                    </button>
+                    <button class="back-btn btn grey darken-2 right">
+                        <i class="small material-icons left">undo</i>
+                        Back
+                    </button> 
+                </form>
+            </div>
+        </div>
+        <br>
+        <table class="centered">
+            <tbody class="contact-list">
+                
+            </tbody>
+        </table>
+    </div>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
