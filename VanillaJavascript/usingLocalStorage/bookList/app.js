@@ -106,6 +106,7 @@ class Store {
       }
 }
 
+// App Controller
 // Event Listeners for DOMload
 document.addEventListener('DOMContentLoaded', Store.displayBooks);
 
