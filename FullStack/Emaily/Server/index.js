@@ -1,12 +1,17 @@
+// All imports
 const express = require("express");
+const passport = require('passport');
+const GoogleStrategy = require('passport-google-oauth20').Strategy;
+
 
 // Initialisig Express server
 const app = express();
 
-// Handling Root Route get Request
-app.get("/", (req, res) => {
-  res.send({hi: "There"});
-});
+passport.use(new GoogleStrategy({
+  
+}, ))
+
+
 
 const PORT = process.env.PORT || 5000;
 
