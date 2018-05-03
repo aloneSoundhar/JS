@@ -20,5 +20,10 @@ passport.use(
   })
 );
 
-// Set a static port for listening requests
-app.listen(5000);
+app.get('/auth/google', (req,res) => passport.authenticate('google', {
+  scope: ['profile', 'email'],
+}));
+
+// Dynamic PORT allocation
+const PORT = process.env.PORT || 5000;
+app.listen(PORT);
