@@ -4,21 +4,21 @@ const express = require('express');
 const passport = require('passport');
 // Google Authentuication
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
+// Keys for GoogleStrategy
+const Keys = require('./config/keys');
 
 // Inititalised Express in app
 const app = express();
 
-// Hadled Root Route with get http Verb
-app.get("/", (req, res) => {
-  res.send({ hi: "There" });
-});
-
-//   clientID: '985355583629-1rdpnv4cvnp6lbb4s7q3c7j25ur5e1r4.apps.googleusercontent.com',
-//   clientSecret: '9ZCmtmwGSDiNeN00PTe2kBWl' 
-
-passport.use(new GoogleStrategy({
-
-}, ))
+passport.use(
+  new GoogleStrategy({
+  clientID: Keys.googleClientID,
+  clientSecret: Keys.googleClientSecret,
+  callbackURL: '/auth/google/callback'
+  }, accessToken => {
+    console.log(accessToken);
+  })
+);
 
 // Set a static port for listening requests
 app.listen(5000);
