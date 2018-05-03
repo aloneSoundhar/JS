@@ -20,8 +20,8 @@ passport.use(
   })
 );
 
-app.get('/auth/google', (req,res) => passport.authenticate('google', {
-  scope: ['profile', 'email'],
+app.get('/auth/google', passport.authenticate('google', {
+  scope: ['profile', 'email']
 }));
 
 // Dynamic PORT allocation
